@@ -86,3 +86,7 @@ By the end of the capstone project, AETHER AI will demonstrate how collective in
 **Naorem Nganthoiba Singh**
 
 Capstone Project — AETHER AI
+
+---
+
+**Capstone Submission Status:** README setup completed.
