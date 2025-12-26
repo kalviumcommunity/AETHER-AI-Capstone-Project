@@ -1,3 +1,5 @@
+// This folder is for Business Logic and to check the health status of the API's that's being called 
+
 exports.healthCheck = (req, res) => {
   res.json({
     status: "healthy",
@@ -25,3 +27,4 @@ exports.getArbiter = (req, res) => {
     role: "Final decision maker"
   });
 };
+
