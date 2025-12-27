@@ -61,3 +61,39 @@ exports.arbiterDecision = (req, res) => {
     confidence: "high"
   });
 };
+
+// PUT: Update task status
+exports.updateTaskStatus = (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+
+  if (!status) {
+    return res.status(400).json({
+      error: "status is required"
+    });
+  }
+
+  res.json({
+    taskId: id,
+    updatedStatus: status,
+    message: "Task status updated successfully"
+  });
+};
+
+// PUT: Update arbiter decision
+exports.updateDecision = (req, res) => {
+  const { id } = req.params;
+  const { decision } = req.body;
+
+  if (!decision) {
+    return res.status(400).json({
+      error: "decision is required"
+    });
+  }
+
+  res.json({
+    decisionId: id,
+    updatedDecision: decision,
+    message: "Arbiter decision updated successfully"
+  });
+};
