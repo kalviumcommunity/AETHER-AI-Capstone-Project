@@ -4,11 +4,15 @@ const router = express.Router();
 const {
   healthCheck,
   getCouncil,
-  getArbiter
+  getArbiter,
+  submitTask,
+  arbiterDecision
 } = require("../controllers/aether.controller");
 
 router.get("/health", healthCheck);
 router.get("/council", getCouncil);
 router.get("/arbiter", getArbiter);
+router.post("/task", submitTask);
+router.post("/decision", arbiterDecision);
 
 module.exports = router;
