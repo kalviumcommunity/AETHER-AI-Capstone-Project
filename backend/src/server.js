@@ -19,4 +19,10 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`🚀 Backend running on port ${PORT}`);
+
+  if (process.env.RENDER) {
+    console.log("🌐 Running in Render deployment environment");
+  } else {
+    console.log("💻 Running in local development environment");
+  }
 });
